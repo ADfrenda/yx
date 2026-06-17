@@ -4,13 +4,13 @@
     "USE_GLOBAL_MODE": true,
     "_comment_USE_GLOBAL_MODE": "true=全局最优15个；false=每个国家最优1个",
 
-    "GLOBAL_TOP_N": 15,
+    "GLOBAL_TOP_N": 10,
     "_comment_GLOBAL_TOP_N": "全局模式下最终保留的节点数量",
 
     "PER_COUNTRY_TOP_N": 1,
     "_comment_PER_COUNTRY_TOP_N": "分国家模式下每个国家保留的节点数量",
 
-    "BANDWIDTH_CANDIDATES": 90,
+    "BANDWIDTH_CANDIDATES": 300,
     "_comment_BANDWIDTH_CANDIDATES": "进入带宽测速的候选节点数（从TCP通过者中选取前N个）",
 
     "TCP_PROBES": 3,
@@ -46,7 +46,7 @@
     "PRE_FILTER_PORTS": [443],
     "_comment_PRE_FILTER_PORTS": "TCP 测试前允许的端口列表（可多端口）",
 
-    "ENABLE_WXPUSHER": true,
+    "ENABLE_WXPUSHER": false,
     "_comment_ENABLE_WXPUSHER": "是否启用 WxPusher 微信通知",
 
     "WXPUSHER_APP_TOKEN": "your_app_token_here",
@@ -65,7 +65,7 @@
     "_comment_NOTIFY_CONNECT_TIMEOUT": "微信通知 API 连接超时（秒）",
 
     "_comment_cf_dns": "Cloudflare DNS 批量更新配置",
-    "CF_ENABLED": true,
+    "CF_ENABLED": false,
     "CF_API_TOKEN": "your_CF_API_TOKEN",
     "CF_ZONE_ID": "your_CF_ZONE_ID",
     "CF_DNS_RECORD_NAME": "your_CF_DNS_RECORD_NAME",
@@ -160,9 +160,9 @@
     "_comment_FILTER_BLOCKED_COUNTRIES_ENABLED": "【仅DNS】黑名单开关（true=屏蔽下方 BLOCKED_COUNTRIES 中的国家）",
 
     "BLOCKED_COUNTRIES": [
-        "BD", "BI", "BY", "CD", "CF", "CN", "CU", "DE", "ET", "HK",
+        "BD", "BI", "BY", "CD", "CF", "CN", "CU", "DE", "ET",
         "IR", "KP", "LY", "MO", "NG", "NL", "PK", "RU", "SD", "SO",
-        "SY", "TH", "TW", "UA", "VE", "VN", "YE", "ZW"
+        "SY", "TH", "UA", "VE", "VN", "YE", "ZW"
     ],
     "_comment_BLOCKED_COUNTRIES": "【仅DNS】黑名单国家代码列表（DNS 更新时剔除这些国家的节点）",
 
@@ -175,7 +175,7 @@
     "DNS_UPDATE_TARGET_COUNT": 15,
     "_comment_DNS_UPDATE_TARGET_COUNT": "DNS 更新时写入的最大 IP 数量，独立于筛选模式",
 
-    "BANDWIDTH_SIZE_MB": 0.5,
+    "BANDWIDTH_SIZE_MB": 10,
     "_comment_BANDWIDTH_SIZE_MB": "带宽测速下载文件大小（MB）",
 
     "BANDWIDTH_TIMEOUT": 3,
@@ -196,7 +196,7 @@
     "BANDWIDTH_CONNECT_TIMEOUT": 3,
     "_comment_BANDWIDTH_CONNECT_TIMEOUT": "curl 测速连接超时（秒）",
 
-    "MAX_WORKERS": 200,
+    "MAX_WORKERS": 600,
     "_comment_MAX_WORKERS": "TCP 并发测试的最大线程数",
 
     "AVAILABILITY_WORKERS": 32,
@@ -235,9 +235,9 @@
     "_comment_AD_PERLINE_ENABLED": "行尾追加开关",
     "AD_PERLINE_TEXT": " 纯文本",
 
-    "IP_TXT_SHOW_BANDWIDTH": false,
+    "IP_TXT_SHOW_BANDWIDTH": true,
     "_comment_IP_TXT_SHOW_BANDWIDTH": "ip.txt 中是否附带带宽测速信息（如 5.20 Mbps）",
 
-    "IP_TXT_SHOW_LATENCY": false,
+    "IP_TXT_SHOW_LATENCY": true,
     "_comment_IP_TXT_SHOW_LATENCY": "ip.txt 中是否附带 TCP 延迟信息（如 50.30 ms）"
 }
